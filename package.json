@@ -1,0 +1,19 @@
+{
+  "name": "screenshot",
+  "version": "1.0.0",
+  "description": "Webpage screenshot tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src",
+    "shot": "npx playwright test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.9"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

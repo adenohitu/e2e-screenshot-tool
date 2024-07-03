@@ -56,6 +56,7 @@ Object.keys(LinkList).forEach(function (key) {
       createSavePath,
       `${LinkList[key].name}.png`
     );
+    console.log(`Screenshot:${fullImagePath}`);
     // // fullサイズで画面をスクショ
     await page.emulateMedia({ media: "screen" });
     await page.screenshot({
@@ -63,7 +64,7 @@ Object.keys(LinkList).forEach(function (key) {
       fullPage: true,
     });
     const pdfPath = path.join(createSavePath, `${LinkList[key].name}.pdf`);
-
+    console.log(`Screenshot:${pdfPath}`);
     if (test.info().project.name == "chromium") {
       // PDFで保存
       await page.emulateMedia({ media: "print" });
